@@ -22,9 +22,10 @@ export default class RecipesList extends Component {
         this.deleteRecipe = this.deleteRecipe.bind(this);
         this.state = {recipes: []};
       }
+      //http://localhost:5000/recipes/
 
       componentDidMount() {
-        axios.get('http://localhost:5000/recipes/')
+        axios.get('recipes/')
          .then(response => {
            this.setState({ recipes: response.data });
          })
