@@ -8,9 +8,9 @@ require('dotenv').config();
 
 const app = express();
 const port = process.env.PORT || 5000;
-const devUrl = 'https://tranquil-bayou-83494.herokuapp.com' 
+
 app.use(cors());
-res.header("Access-Control-Allow-Origin", devUrl);
+
 app.use(express.json());
 
 const uri = process.env.MONGODB_URI;
