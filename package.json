@@ -1,0 +1,28 @@
+{
+  "name": "RecipeApp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-postbuild": " cd client && npm install and npm run build"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatthewDonald98/RecipeApp.git"
+  },
+  "keywords": [],
+  "author": "Matthew ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MatthewDonald98/RecipeApp/issues"
+  },
+  "homepage": "https://github.com/MatthewDonald98/RecipeApp#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.11"
+  }
+}
