@@ -25,7 +25,7 @@ export default class RecipesList extends Component {
       //http://localhost:5000/recipes/
 
       componentDidMount() {
-        axios.get('recipes/')
+        axios.get('http://localhost:5000/recipes/')
          .then(response => {
            this.setState({ recipes: response.data });
          })

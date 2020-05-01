@@ -26,7 +26,7 @@ export default class CreateRecipe extends Component {
   // http://localhost:5000/users/
 
   componentDidMount() {
-    axios.get('users/')
+    axios.get('http://localhost:5000/users/')
         .then(response => {
          if (response.data.length > 0) {
         this.setState({ 
