@@ -10,7 +10,7 @@ const Recipe = props => (
       <td>{props.recipe.timeToCook}</td>
       <td>{props.recipe.date.substring(0,10)}</td>
       <td>
-        <Link to={"/edit/"+props.recipe._id}>edit</Link> | <a href="#" onClick={() => { props.deleteRecipe(props.recipe._id) }}>delete</a>
+        <Link to={"/edit/"+props.recipe._id}>Edit</Link> | <a href="#" onClick={() => { props.deleteRecipe(props.recipe._id) }}>Delete</a>
       </td>
     </tr>
   )
@@ -25,7 +25,7 @@ export default class RecipesList extends Component {
       //http://localhost:5000/recipes/
 
       componentDidMount() {
-        axios.get('http://localhost:5000/recipes/')
+        axios.get('/recipes/')
          .then(response => {
            this.setState({ recipes: response.data });
          })
@@ -33,9 +33,10 @@ export default class RecipesList extends Component {
             console.log(error);
          })
       }
+//        axios.delete('http://localhost:5000/recipes/'+id)
 
       deleteRecipe(id) {
-        axios.delete('http://localhost:5000/recipes/'+id)
+        axios.delete('/recipes/'+id)
           .then(res => console.log(res.data));
         this.setState({
           recipes: this.state.recipes.filter(el => el._id !== id)

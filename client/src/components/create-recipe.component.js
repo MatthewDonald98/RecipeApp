@@ -26,7 +26,7 @@ export default class CreateRecipe extends Component {
   // http://localhost:5000/users/
 
   componentDidMount() {
-    axios.get('http://localhost:5000/users/')
+    axios.get('/users/')
         .then(response => {
          if (response.data.length > 0) {
         this.setState({ 
@@ -80,9 +80,10 @@ onSubmit(e) {
     timeToCook: this.state.timeToCook,
     date: this.state.date,
   };
+//  axios.post('http://localhost:5000/recipes/add', recipe)
 
   console.log(recipe);
-  axios.post('http://localhost:5000/recipes/add', recipe)
+  axios.post('/recipes/add', recipe)
   .then(res => console.log(res.data));
   
   window.location = '/';

@@ -23,9 +23,10 @@ export default class EditRecipe extends Component {
       users: []
     }
   }
+//    axios.get('http://localhost:5000/recipes/'+this.props.match.params.id)
 
   componentDidMount() {
-    axios.get('http://localhost:5000/recipes/'+this.props.match.params.id)
+    axios.get('/recipes/'+this.props.match.params.id)
       .then(response => {
         this.setState({
           username: response.data.username,          
@@ -41,7 +42,7 @@ export default class EditRecipe extends Component {
       //    axios.get('http://localhost:5000/users/')
 
 
-      axios.get('http://localhost:5000/users/')
+      axios.get('/users/')
       .then(response => {
         this.setState({ users: response.data.map(user => user.username) });
       })
@@ -93,7 +94,10 @@ export default class EditRecipe extends Component {
 
     console.log(recipe);
 
-    axios.post('http://localhost:5000/recipes/update/'+this.props.match.params.id, recipe)
+    //    axios.post('http://localhost:5000/recipes/update/'+this.props.match.params.id, recipe)
+
+
+    axios.post('/recipes/update/'+this.props.match.params.id, recipe)
       .then(res => console.log(res.data));
     
     window.location = '/';
