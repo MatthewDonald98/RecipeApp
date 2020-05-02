@@ -8,6 +8,7 @@ export default class EditRecipe extends Component {
     super(props);
 
     this.onChangeUsername = this.onChangeUsername.bind(this);
+    this.onChangeName = this.onChangeName.bind(this);
     this.onChangeIngredients = this.onChangeIngredients.bind(this);
     this.onChangeDescription = this.onChangeDescription.bind(this);
     this.onChangeTimeToCook = this.onChangeTimeToCook.bind(this);
@@ -16,6 +17,7 @@ export default class EditRecipe extends Component {
 
     this.state = {
       username: '',
+      name: '',
       ingredients: '',
       description: '',
       timeToCook: 0,
@@ -29,7 +31,8 @@ export default class EditRecipe extends Component {
     axios.get('/recipes/'+this.props.match.params.id)
       .then(response => {
         this.setState({
-          username: response.data.username,          
+          username: response.data.username,   
+          name: response.data.name,                 
           ingredients: response.data.ingredients,
           description: response.data.description,
           timeToCook: response.data.timeToCook,
@@ -54,6 +57,12 @@ export default class EditRecipe extends Component {
   onChangeUsername(e) {
     this.setState({
       username: e.target.value
+    });
+  }
+
+  onChangeName(e) {
+    this.setState({
+      name: e.target.value
     });
   }
 
@@ -86,6 +95,7 @@ export default class EditRecipe extends Component {
 
     const recipe = {
       username: this.state.username,
+      name: this.state.name,
       ingredients: this.state.ingredients,
       description: this.state.description,
       timeToCook: this.state.timeToCook,
@@ -123,6 +133,15 @@ export default class EditRecipe extends Component {
                   })
                 }
             </select>
+          </div>
+          <div className="form-group"> 
+            <label>Name: </label>
+            <input  type="text"
+                required
+                className="form-control"
+                value={this.state.name}
+                onChange={this.onChangeName}
+                />
           </div>
           <div className="form-group"> 
             <label>Ingredients: </label>

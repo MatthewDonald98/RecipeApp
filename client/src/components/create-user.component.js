@@ -38,8 +38,8 @@ export default class CreateUser extends Component {
         <div>
         <div class="jumbotron jumbotron-fluid">
         <div class="container">
-          <h1 class="display-4">About Page</h1>
-          <h2 class="lead">This page contains info about the app</h2>
+          <h1 class="display-4">Create User Page</h1>
+          <h2 class="lead">This page is for the user to enter their name</h2>
         </div>
       </div>
         <form onSubmit={this.onSubmit}>

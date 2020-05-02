@@ -8,6 +8,7 @@ export default class CreateRecipe extends Component {
     super(props);
 
     this.onChangeUsername = this.onChangeUsername.bind(this);
+    this.onChangeName = this.onChangeName.bind(this);
     this.onChangeIngredients = this.onChangeIngredients.bind(this);
     this.onChangeDescription = this.onChangeDescription.bind(this);
     this.onChangeTimeToCook = this.onChangeTimeToCook.bind(this);
@@ -16,6 +17,7 @@ export default class CreateRecipe extends Component {
 
     this.state = {
       username: '',
+      name: '',
       ingredients: '',
       description: '',
       timeToCook: 0,
@@ -44,6 +46,12 @@ export default class CreateRecipe extends Component {
     this.setState({
       username: e.target.value
     });
+}
+
+onChangeName(e) {
+  this.setState({
+    name: e.target.value
+  });
 }
 
 onChangeIngredients(e) {
@@ -75,6 +83,7 @@ onSubmit(e) {
 
   const recipe = {
     username: this.state.username,
+    name: this.state.name,
     ingredients: this.state.ingredients,
     description: this.state.description,
     timeToCook: this.state.timeToCook,
@@ -114,6 +123,15 @@ render() {
                   })
                 }
             </select>
+          </div>
+          <div className="form-group"> 
+            <label>Name: </label>
+            <input  type="text"
+                required
+                className="form-control"
+                value={this.state.name}
+                onChange={this.onChangeName}
+                />
           </div>
           <div className="form-group"> 
             <label>Ingredients: </label>

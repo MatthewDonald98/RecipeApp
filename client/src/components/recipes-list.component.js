@@ -5,6 +5,7 @@ import axios from 'axios';
 const Recipe = props => (
     <tr>
       <td>{props.recipe.username}</td>
+      <td>{props.recipe.name}</td>
       <td>{props.recipe.ingredients}</td>
       <td>{props.recipe.description}</td>
       <td>{props.recipe.timeToCook}</td>
@@ -63,6 +64,7 @@ export default class RecipesList extends Component {
           <thead className="thead-light">
             <tr>
               <th>User</th>
+              <th>Name</th>
               <th>Ingredients</th>
               <th>Description</th>
               <th>Time To Cook (minutes)</th>
