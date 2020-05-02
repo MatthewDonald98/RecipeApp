@@ -9,7 +9,7 @@ router.route('/').get((req, res) => {
 
 router.route('/add').post((req, res) => {
   const username = req.body.username;
-  const name = req.body.ingredients;
+  const name = req.body.name;
   const ingredients = req.body.ingredients;
   const description = req.body.description;
   const timeToCook = Number(req.body.timeToCook);
