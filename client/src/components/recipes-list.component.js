@@ -51,16 +51,22 @@ export default class RecipesList extends Component {
   render() {
     return (
         <div>
-        <h3>Logged Exercises</h3>
+          <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Recipe Page</h1>
+          <h2 class="lead">This page contains the recipes created by users and is used 
+          to  to store and modify recipes </h2>
+        </div>
+      </div>
         <table className="table">
           <thead className="thead-light">
             <tr>
-              <th>Username</th>
+              <th>User</th>
               <th>Ingredients</th>
               <th>Description</th>
-              <th>timeToCook</th>
+              <th>Time To Cook (minutes)</th>
               <th>Date</th>
-              <th>Actions</th>
+              <th>Modify</th>
             </tr>
           </thead>
           <tbody>

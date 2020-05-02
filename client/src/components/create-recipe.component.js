@@ -90,7 +90,12 @@ onSubmit(e) {
 render() {
     return (
       <div>
-        <h3>Create New Recipe</h3>
+        <div class="jumbotron jumbotron-fluid">
+          <div class="container">
+            <h1 class="display-4">Add a new Recipe</h1>
+           <h2 class="lead">Fill in the information below to add a new recipe to the book</h2>
+         </div>
+        </div>
         <form onSubmit={this.onSubmit}>
           <div className="form-group"> 
             <label>Username: </label>
@@ -147,7 +152,7 @@ render() {
        </div>
 
        <div className="form-group">
-         <input type="submit" value="Create Exercise Log" className="btn btn-primary" />
+         <input type="submit" value="Add New Recipe" className="btn btn-primary" />
        </div>
      </form>
    </div>

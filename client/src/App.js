@@ -7,6 +7,7 @@ import RecipesList from "./components/recipes-list.component.js";
 import EditRecipe from "./components/edit-recipe.component";
 import CreateRecipe from "./components/create-recipe.component";
 import CreateUser from "./components/create-user.component";
+import AboutPage from "./components/about-page.component";
  
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/edit/:id" component={EditRecipe} />
         <Route path="/create" component={CreateRecipe} />
         <Route path="/user" component={CreateUser} />
+        <Route path="/about" component={AboutPage} />
       </div>
     </Router>
   );

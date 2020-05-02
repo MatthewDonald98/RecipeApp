@@ -36,7 +36,12 @@ export default class CreateUser extends Component {
   render() {
     return (
         <div>
-        <h3>Create New User</h3>
+        <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">About Page</h1>
+          <h2 class="lead">This page contains info about the app</h2>
+        </div>
+      </div>
         <form onSubmit={this.onSubmit}>
           <div className="form-group"> 
             <label>Username: </label>
