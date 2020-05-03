@@ -47,6 +47,7 @@ export default class CreateUser extends Component {
             <label>Username: </label>
             <input  type="text"
                 required
+                maxLength = "30"
                 className="form-control"
                 value={this.state.username}
                 onChange={this.onChangeUsername}

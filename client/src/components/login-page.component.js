@@ -15,6 +15,7 @@ export default class LoginPage extends Component {
             <label> Username: </label>
             <input  type="text"
                 required
+                maxLength = "30"
                 className="form-control"
                 />
           </div>
@@ -22,9 +23,13 @@ export default class LoginPage extends Component {
             <label> Password: </label>
             <input  type="password"
                 required
+                maxLength = "30"
                 className="form-control"
                 />
           </div>
+          <div className="form-group">
+         <input type="submit" value="Login" className="btn btn-primary" />
+       </div>
         </form>
       </div>
     )

@@ -128,6 +128,7 @@ render() {
             <label>Name: </label>
             <input  type="text"
                 required
+                maxLength = "30"
                 className="form-control"
                 value={this.state.name}
                 onChange={this.onChangeName}
@@ -137,6 +138,7 @@ render() {
             <label>Ingredients: </label>
             <input  type="text"
                 required
+                maxLength = "30"
                 className="form-control"
                 value={this.state.ingredients}
                 onChange={this.onChangeIngredients}
@@ -146,6 +148,7 @@ render() {
             <label>Description: </label>
             <input  type="text"
                 required
+                maxLength = "30"
                 className="form-control"
                 value={this.state.description}
                 onChange={this.onChangeDescription}
@@ -153,8 +156,9 @@ render() {
           </div>
           <div className="form-group">
             <label>Time to Cook (in minutes): </label>
-            <input 
-             type="text" 
+            <input  type="number" 
+            required 
+            maxLength = "10"
              className="form-control"
              value={this.state.timeToCook}
              onChange={this.onChangeTimeToCook}

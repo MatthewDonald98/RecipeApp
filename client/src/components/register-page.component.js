@@ -15,6 +15,7 @@ export default class RegisterPage extends Component {
             <label> First Name: </label>
             <input  type="text"
                 required
+                maxLength = "20"
                 className="form-control"
                 />
           </div>
@@ -22,6 +23,7 @@ export default class RegisterPage extends Component {
             <label> Last Name: </label>
             <input  type="text"
                 required
+                maxLength = "20"
                 className="form-control"
                 />
           </div>
@@ -29,6 +31,7 @@ export default class RegisterPage extends Component {
             <label> Username: </label>
             <input  type="text"
                 required
+                maxLength = "20"
                 className="form-control"
                 />
           </div>
@@ -36,6 +39,8 @@ export default class RegisterPage extends Component {
             <label> Password: </label>
             <input  type="password"
                 required
+                minLength = "6"
+                maxLength = "30"
                 className="form-control"
                 />
           </div>
@@ -43,12 +48,14 @@ export default class RegisterPage extends Component {
             <label> Confirm Password: </label>
             <input  type="password"
                 required
+                minLength = "6"
+                maxLength = "30"
                 className="form-control"
                 />
           </div>
           <div className="form-group"> 
             <label> Email: </label>
-            <input  type="text"
+            <input  type="email"
                 required
                 className="form-control"
                 />
