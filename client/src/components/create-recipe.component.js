@@ -138,7 +138,6 @@ render() {
             <label>Ingredients: </label>
             <input  type="text"
                 required
-                maxLength = "30"
                 className="form-control"
                 value={this.state.ingredients}
                 onChange={this.onChangeIngredients}
@@ -148,7 +147,6 @@ render() {
             <label>Description: </label>
             <input  type="text"
                 required
-                maxLength = "30"
                 className="form-control"
                 value={this.state.description}
                 onChange={this.onChangeDescription}
