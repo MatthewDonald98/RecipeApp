@@ -22,6 +22,14 @@ export default class Navbar extends Component {
           <Link to="/about" className="nav-link">About</Link>
           </li>
         </ul>
+        <ul className="navbar-nav ml-auto">
+        <li className="navbar-item">
+          <Link to="/register" className="nav-link">Register</Link>
+          </li>
+          <li className="navbar-item">
+          <Link to="/login" className="nav-link">Login</Link>
+          </li>
+        </ul>
         </div>
       </nav>
     );
