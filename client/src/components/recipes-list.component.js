@@ -15,16 +15,18 @@ const Recipe = props => (
       </td>
     </tr>
   )
+  //Recipe List
 
 export default class RecipesList extends Component {
-
+  //Constructor
+  
     constructor(props) {
         super(props);
         this.deleteRecipe = this.deleteRecipe.bind(this);
         this.state = {recipes: []};
       }
-      //http://localhost:5000/recipes/
-
+      
+      //Recipes route
       componentDidMount() {
         axios.get('/recipes/')
          .then(response => {
@@ -34,8 +36,8 @@ export default class RecipesList extends Component {
             console.log(error);
          })
       }
-//        axios.delete('http://localhost:5000/recipes/'+id)
 
+      //Delete route
       deleteRecipe(id) {
         axios.delete('/recipes/'+id)
           .then(res => console.log(res.data));

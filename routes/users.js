@@ -7,6 +7,7 @@ router.route('/').get((req, res) => {
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
+//Add user route
 router.route('/add').post((req, res) => {
   const username = req.body.username;
 

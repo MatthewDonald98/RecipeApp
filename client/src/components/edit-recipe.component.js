@@ -3,7 +3,10 @@ import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import axios from 'axios';
 
+//Edit Recipe
+
 export default class EditRecipe extends Component {
+  //Constructor
   constructor(props) {
     super(props);
 
@@ -25,8 +28,8 @@ export default class EditRecipe extends Component {
       users: []
     }
   }
-//    axios.get('http://localhost:5000/recipes/'+this.props.match.params.id)
 
+//Edit route
   componentDidMount() {
     axios.get('/recipes/'+this.props.match.params.id)
       .then(response => {
@@ -42,9 +45,8 @@ export default class EditRecipe extends Component {
       .catch(function (error) {
         console.log(error);
       })
-      //    axios.get('http://localhost:5000/users/')
 
-
+      //Users
       axios.get('/users/')
       .then(response => {
         this.setState({ users: response.data.map(user => user.username) });
@@ -104,9 +106,7 @@ export default class EditRecipe extends Component {
 
     console.log(recipe);
 
-    //    axios.post('http://localhost:5000/recipes/update/'+this.props.match.params.id, recipe)
-
-
+    //Update route
     axios.post('/recipes/update/'+this.props.match.params.id, recipe)
       .then(res => console.log(res.data));
     

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+//Register Page
 export default class RegisterPage extends Component {
   render() {
     return (

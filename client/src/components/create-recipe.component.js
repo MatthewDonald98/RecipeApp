@@ -3,7 +3,10 @@ import axios from 'axios';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 
+//Create Recipe Page
+
 export default class CreateRecipe extends Component {
+  //Constructor
   constructor(props) {
     super(props);
 
@@ -25,9 +28,10 @@ export default class CreateRecipe extends Component {
       users: []
     }
   }
-  // http://localhost:5000/users/
+  
 
   componentDidMount() {
+    //route
     axios.get('/users/')
         .then(response => {
          if (response.data.length > 0) {
@@ -89,7 +93,8 @@ onSubmit(e) {
     timeToCook: this.state.timeToCook,
     date: this.state.date,
   };
-//  axios.post('http://localhost:5000/recipes/add', recipe)
+
+  //Add Recipe
 
   console.log(recipe);
   axios.post('/recipes/add', recipe)

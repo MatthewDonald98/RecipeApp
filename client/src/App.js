@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+//imports to components
+
 import Navbar from "./components/navbar.component"
 import RecipesList from "./components/recipes-list.component.js";
 import EditRecipe from "./components/edit-recipe.component";
@@ -11,6 +13,7 @@ import AboutPage from "./components/about-page.component";
 import RegisterPage from "./components/register-page.component.js";
 import LoginPage from "./components/login-page.component.js";
 
+//Routes in the navbar
  
 function App() {
   return (
